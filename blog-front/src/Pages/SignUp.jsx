@@ -1,11 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
+import FormSignUp from "../Components/forms/FormSignUp";
 
-export default class SignUp extends Component {
+export default class SignUpPage extends Component {
   render() {
     return (
       <div>
-        
+        <FormSignUp />
       </div>
-    )
+    );
   }
 }

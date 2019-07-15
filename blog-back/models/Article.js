@@ -5,7 +5,7 @@ const articleSchema = new Schema(
   {
     title: String,
     coverImages: [{ type: String }],
-    contentImages: [{ type: String }],
+    // contentImages: [{ type: String }],
     highLight: String,
     text: String
     // type: { type: Schema.Types.ObjectId, ref: "Type" }

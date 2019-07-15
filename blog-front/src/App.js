@@ -1,25 +1,41 @@
-import React from 'react';
-import './styles/css/main.css';
-import NavMain from './Components/NavMain';
-import PageAbout from './Pages/About';
-import Home from './Pages/Home';
-import Footer from './Components/Footer';
-import ArticlePage from './Pages/ArticlePage';
-import AllArticles from './Pages/AllArticle';
-import VideosPage from './Pages/VideosPage';
-import AddArticle from './Pages/AddArticle';
+import React from "react";
+import "./styles/css/main.css";
+import NavMain from "./Components/NavMain";
+import PageAbout from "./Pages/About";
+import Home from "./Pages/Home";
+import Footer from "./Components/Footer";
+import ArticlePage from "./Pages/ArticlePage";
+import AllArticles from "./Pages/AllArticle";
+import VideosPage from "./Pages/VideosPage";
+import AddArticle from "./Pages/AddArticle";
 import { Switch, Route, Redirect } from "react-router-dom";
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faLinkedin, faTwitter} from '@fortawesome/free-brands-svg-icons';
-import { faUserCircle, faMapMarkerAlt, faSearch, faComment, faHeart, faAngleRight, faChevronRight} from '@fortawesome/free-solid-svg-icons';
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import {
+  faUserCircle,
+  faMapMarkerAlt,
+  faSearch,
+  faComment,
+  faHeart,
+  faAngleRight,
+  faChevronRight
+} from "@fortawesome/free-solid-svg-icons";
 // import { faHeart } from '@fortawesome/free-regular-svg-icons';
-library.add(faUserCircle, faHeart, faMapMarkerAlt, faLinkedin, faTwitter, faSearch, faComment, faAngleRight, faChevronRight)
-
+library.add(
+  faUserCircle,
+  faHeart,
+  faMapMarkerAlt,
+  faLinkedin,
+  faTwitter,
+  faSearch,
+  faComment,
+  faAngleRight,
+  faChevronRight
+);
 
 function App() {
   return (
     <div className="app-container">
-
       <NavMain />
 
       <Switch>
@@ -32,7 +48,7 @@ function App() {
         <Route path="/add-article" component={AddArticle} />
       </Switch>
 
-      <Footer/>
+      <Footer />
     </div>
   );
 }
