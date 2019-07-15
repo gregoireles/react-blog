@@ -43,7 +43,7 @@ function App() {
         <Route path="/home" component={Home} />
         <Route path="/about" component={PageAbout} />
         <Route path="/articles" component={AllArticles} />
-        <Route path="/article" component={ArticlePage} />
+        <Route path="/article/:id" component={ArticlePage} />
         <Route path="/videos" component={VideosPage} />
         <Route path="/add-article" component={AddArticle} />
       </Switch>

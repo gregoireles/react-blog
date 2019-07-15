@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-// import axios from "axios";
+import axios from "axios";
 import Article from "./../Components/Article";
+
 
 class ArticlePage extends Component {
   state = {
@@ -11,6 +12,18 @@ class ArticlePage extends Component {
     text: ""
   };
 
+  componentDidMount = () => {
+    console.log(this.state)
+    axios
+      .get(`${process.env.REACT_APP_BACKEND_URL}/api/article/${this.data.id}`)
+      .then(res => {
+        console.log(res)
+        this.setState({ articles: res.data })
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
   render() {
     return (
       <div>
@@ -21,3 +34,4 @@ class ArticlePage extends Component {
 }
 
 export default ArticlePage;
+

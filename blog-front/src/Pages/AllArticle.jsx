@@ -13,6 +13,7 @@ export default class AllArticles extends Component {
     axios
       .get(`${process.env.REACT_APP_BACKEND_URL}/api/articles`)
       .then(res => {
+        console.log(res)
         this.setState({ articles: res.data })
       })
       .catch(err => {

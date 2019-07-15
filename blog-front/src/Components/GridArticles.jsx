@@ -7,7 +7,10 @@ const GridArticles = ({ data }) => {
   return (
     <div className="grid-articles-container">
       <div className="grid-articles">
-        <Link to="/article"><ArticleCard img={imgLink} data={data} /></Link>
+        {data.map((card, i) => {
+          return (
+            <Link to={`/article/${card._id}`}><ArticleCard img={imgLink} title={card.title} city={card.city} key={i} /></Link>);
+        })}
 
       </div>
     </div>
