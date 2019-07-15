@@ -1,12 +1,19 @@
 require("dotenv").config();
 require("./config/db-connection");
 require("./config/passport");
+const cors = require("cors");
 const express = require("express");
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
 const passport = require("passport");
 const app = express();
 
+app.use(
+  cors({
+    credentials: true,
+    origin: process.env.SITE_URL
+  })
+);
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
