@@ -13,9 +13,10 @@ class ArticlePage extends Component {
   };
 
   componentDidMount = () => {
-    console.log(this.state)
+
     axios
-      .get(`${process.env.REACT_APP_BACKEND_URL}/api/article`)
+      .get(`${process.env.REACT_APP_BACKEND_URL}/article/${this._id}`)
+    console.log(this._id)
       .then(res => {
         console.log(res)
         this.setState({ articles: res.data })
@@ -27,7 +28,7 @@ class ArticlePage extends Component {
   render() {
     return (
       <div>
-        <Article />
+        <Article data={this.state} />
       </div>
     );
   }
