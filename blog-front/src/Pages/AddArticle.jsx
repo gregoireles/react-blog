@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import FormAddArticle from "../Components/FormAddArticle";
+import FormAddArticle from "../Components/forms/FormAddArticle";
 
 export default class About extends Component {
   render() {
