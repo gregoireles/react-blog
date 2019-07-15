@@ -15,7 +15,7 @@ class ArticlePage extends Component {
   componentDidMount = () => {
     console.log(this.state)
     axios
-      .get(`${process.env.REACT_APP_BACKEND_URL}/api/article/${this.data.id}`)
+      .get(`${process.env.REACT_APP_BACKEND_URL}/api/article`)
       .then(res => {
         console.log(res)
         this.setState({ articles: res.data })
