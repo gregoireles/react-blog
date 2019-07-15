@@ -1,7 +1,7 @@
 const express = require("express");
 const router = new express.Router();
 const Article = require("../models/Article");
-
+const cloudinaryUpload = require("../config/cloudinary")
 const getAll = () => Article.find();
 const getOne = id => Article.findById(id);
 const updateOne = (id, data) => Article.findByIdAndUpdate(id, data);
@@ -24,7 +24,8 @@ router.get("/:id", (req, res) => {
     .catch(error => res.status(500).send("Something went wrong"));
 });
 
-router.post("/", (req, res) => {
+router.post("/", cloudinaryUpload.single("photo"),(req, res) => {
+  console.log(req.file)
   create(req.body)
     .then(article => res.status(200).send(article))
     .catch(err => res.status(500).send("Something went wrong"));
