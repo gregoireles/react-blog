@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import DropMenu from "./DropMenu";
 
 function NavMain() {
@@ -11,12 +11,30 @@ function NavMain() {
           <NavLink activeClassName="is-active" exact to="/home">
             <h1 className="nav-logo">There.</h1>
           </NavLink>
-          <NavLink activeClassName="is-active" className="nav-item" to="/articles">Articles</NavLink>
-          <NavLink activeClassName="is-active" className="nav-item" to="/about">About</NavLink>
-          <NavLink activeClassName="is-active" className="nav-item" to="/videos">Videos</NavLink>
+          <NavLink
+            activeClassName="is-active"
+            className="nav-item"
+            to="/articles"
+          >
+            Articles
+          </NavLink>
+          <NavLink activeClassName="is-active" className="nav-item" to="/about">
+            About
+          </NavLink>
+          <NavLink
+            activeClassName="is-active"
+            className="nav-item"
+            to="/videos"
+          >
+            Videos
+          </NavLink>
         </div>
         <div className="nav-side">
-          <NavLink activeClassName="is-active" className="nav-item-link" to="/signin">
+          <NavLink
+            activeClassName="is-active"
+            className="nav-item-link"
+            to="/signin"
+          >
             <button className="btn-nav">
               My Account
               <FontAwesomeIcon icon="angle-right" className="arrow-btn" />
@@ -30,7 +48,7 @@ function NavMain() {
         {/* <NavLink activeClassName="is-active"  to="/sign-in">Sign in</NavLink> */}
       </nav>
     </div>
-  )
+  );
 }
 
 export default NavMain;
