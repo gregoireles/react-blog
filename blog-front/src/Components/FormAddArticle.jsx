@@ -19,9 +19,9 @@ const FormAddArticle = ({ img }) => {
       <label>
         Text: <input type="text" name="textbox" />
       </label>
-      <label>
+      {/* <label>
         Type: <input type="text" name="type" />
-      </label>
+      </label> */}
     </div>
   );
 };
