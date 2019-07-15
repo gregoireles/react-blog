@@ -4,7 +4,7 @@ const Tag = require("../models/Tag");
 
 const getAll = () => Tag.find();
 const getOne = id => Tag.findById(id);
-const updateOne = (id, data) => Tag.findByIdAndUpdate(id, data);
+const updateOne = (id, data) => Tag.findByIdAndUpdate(id, data, {new: true});
 const deleteOne = id => Tag.findByIdAndDelete(id);
 const create = data => Tag.create(data);
 
@@ -39,7 +39,7 @@ router.delete("/:id", (req, res) => {
 });
 
 router.patch("/:id", (req, res) => {
-  updateOne(req.params.id).then(updatedTag => res.status(200).send(updatedTag));
+  updateOne(req.params.id, req.body).then(updatedTag => res.status(200).send(updatedTag));
 });
 
 //TODO Validation ??
