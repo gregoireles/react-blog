@@ -46,7 +46,6 @@ function App() {
         <Route path="/article" component={ArticlePage} />
         <Route path="/videos" component={VideosPage} />
         <Route path="/add-article" component={AddArticle} />
-        <Route path="/signup" component={SignUp} />
       </Switch>
 
       <Footer />
