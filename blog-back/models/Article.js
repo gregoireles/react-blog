@@ -7,8 +7,8 @@ const articleSchema = new Schema(
     coverImages: [{ type: String }],
     contentImages: [{ type: String }],
     highLight: String,
-    text: String,
-    type: { type: Schema.Types.ObjectId, ref: "Type" }
+    text: String
+    // type: { type: Schema.Types.ObjectId, ref: "Type" }
   },
   { timestamps: { createdAt: "created_at" } }
 );
