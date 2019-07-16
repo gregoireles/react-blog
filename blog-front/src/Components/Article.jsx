@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 
-const Article = () => {
+const Article = ({ title, text, highlight }) => {
   return (
     <article className="wrapper article-page">
       <div className="article-images">
@@ -16,14 +16,14 @@ const Article = () => {
       </div>
       <div className="article-title-container">
         <p className="article-over-title">Toronto</p>
-        <h2 className="article-title">This is the title for the article</h2>
+        <h2 className="article-title">{title}</h2>
       </div>
       <div className="article-text">
         <div className="text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tortor nisi, ullamcorper et dapibus vitae, cursus a tellus. Proin egestas, nunc sit amet consequat imperdiet, metus ante accumsan est, non faucibus ex justo vitae leo. Fusce quis ex eleifend, dapibus dolor at, posuere mauris. Duis pellentesque aliquet ex, faucibus luctus nulla sagittis a. Quisque iaculis neque sed volutpat dignissim. Etiam fringilla orci lorem, ac aliquam mauris suscipit sed.
+          {text}
 
-           <br />
-          <p className="highlight">“Provident atque, aperiam assumenda tempora est hic! Saepe, harum.Etiam lacinia, dui eleifend vehicula pulvinar”</p>
+          <br />
+          <p className="highlight">{highlight}</p>
 
           Morbi consequat eu quam in tempus. Etiam auctor, magna sed tempus venenatis, arcu ante malesuada lorem, a hendrerit ex massa eu justo. Fusce varius malesuada diam eget sagittis. Phasellus vehicula justo nec sem iaculis, id dignissim urna placerat.
           <br />

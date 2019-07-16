@@ -28,6 +28,13 @@ function NavMain() {
           >
             Videos
           </NavLink>
+          <NavLink
+            activeClassName="is-active"
+            className="nav-item"
+            to="/manage"
+          >
+            Manage
+          </NavLink>
         </div>
         <div className="nav-side">
           <NavLink

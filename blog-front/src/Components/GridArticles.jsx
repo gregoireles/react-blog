@@ -9,7 +9,9 @@ const GridArticles = ({ data }) => {
       <div className="grid-articles">
         {data.map((card, i) => {
           return (
-            <Link to={`/article/${card._id}`}><ArticleCard img={imgLink} title={card.title} city={card.city} key={i} /></Link>);
+            <Link key={i} to={`/article/${card._id}`}>
+              <ArticleCard img={imgLink} title={card.title} city={card.city} />
+            </Link>);
         })}
 
       </div>

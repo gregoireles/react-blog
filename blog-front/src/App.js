@@ -8,6 +8,7 @@ import ArticlePage from "./Pages/ArticlePage";
 import AllArticles from "./Pages/AllArticle";
 import VideosPage from "./Pages/VideosPage";
 import AddArticle from "./Pages/AddArticle";
+import Manage from "./Pages/Manage";
 import { Switch, Route, Redirect } from "react-router-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
@@ -46,6 +47,7 @@ function App() {
         <Route path="/article/:id" component={ArticlePage} />
         <Route path="/videos" component={VideosPage} />
         <Route path="/add-article" component={AddArticle} />
+        <Route path="/manage" component={Manage} />
       </Switch>
 
       <Footer />
